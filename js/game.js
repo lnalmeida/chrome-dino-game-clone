@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector('.dino');
     const grid = document.querySelector('.grid');
     const body = document.querySelector('body');
-    const alert = document.getElementById('alert');
+    const gameOver = document.getElementById('game-over');
     let isJumping = false;
     let gravity = 0.9;
     let isGameOver = false;
@@ -66,13 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) {
                 clearInterval(moveObstacle);
                 grid.removeChild(obstacle);
-                alert.innerHTML = 'Game Over';
-                isGameOver = true;
-
                 body.removeChild(body.firstChild)
+                isGameOver = true;
+                
                 while (grid.firstChild) {
                     grid.removeChild(grid.lastChild);
                 }
+                gameOver.style.display = 'block';
+                gameOver.style.top = '250%';
+                gameOver.style.left = '250%';
+                gameOver.style.fontSize = '80px';
+                gameOver.style.color = 'white';
+                gameOver.style.textAlign = 'center';
+                gameOver.style.fontFamily = '"Press Start 2P", cursive';
+                gameOver.style.fontWeight = 'bold';
+                gameOver.style.textShadow = '2px 2px black';
+
+                gameOver.innerHTML = 'Game Over';
             }
             
             

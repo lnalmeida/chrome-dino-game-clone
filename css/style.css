@@ -1,17 +1,26 @@
+body {
+    background: url(/assets/sonic-backgnd1.jpeg);
+    background-size: 95%;
+    width: 100vw;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
 .dino {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    /* background: url(img/dino.png) no-repeat; */
-    background: red;
+    left: 60px;
+    width: 90px;
+    height: 90px;
+    background: url(/assets/sonic.png) no-repeat;
+    background-color: transparent;
     bottom: 0;
 }
 
 .obstacle {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    background: blue;
+    width: 90px;
+    height: 90px;
+    background: url(/assets/enemy.png) no-repeat;
     bottom: 0;
 }
 
