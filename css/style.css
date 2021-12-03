@@ -1,0 +1,28 @@
+.dino {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /* background: url(img/dino.png) no-repeat; */
+    background: red;
+    bottom: 0;
+}
+
+.obstacle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: blue;
+    bottom: 0;
+}
+
+#alert {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    display: none;
+}
